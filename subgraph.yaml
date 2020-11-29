@@ -1,0 +1,25 @@
+specVersion: 0.0.2
+description: Cfx-test
+repository: https://github.com/samuelhbne/cfx-subgraph
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Cfx
+    network: mainnet
+    source:
+      address: '0x94F36FAa6bB4f74009637292b09C355CcD3e80Eb'
+      abi: nest3price
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Price
+      abis:
+        - name: nest3price
+          file: ./abis/nest3price.json
+      eventHandlers:
+        - event: NowTokenPrice(address,uint256,uint256)
+          handler: NowTokenPrice
+      file: ./src/mapping.ts
