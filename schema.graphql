@@ -1,4 +1,5 @@
-type Price @entity {
+type TokenPrice @entity {
   id: ID!
-  tokenAddress: Bytes!
+  ethAmount: BigInt!
+  erc20Amount: BigInt!
 }

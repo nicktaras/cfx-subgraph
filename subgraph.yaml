@@ -21,5 +21,5 @@ dataSources:
           file: ./abis/nest3price.json
       eventHandlers:
         - event: NowTokenPrice(address,uint256,uint256)
-          handler: NowTokenPrice
+          handler: handleNowTokenPrice
       file: ./src/mapping.ts
