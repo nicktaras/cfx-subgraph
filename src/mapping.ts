@@ -1,5 +1,5 @@
 import { log } from "@graphprotocol/graph-ts";
-import { NowTokenPrice } from '../generated/Cfx/nest3price';
+import { NowTokenPrice } from '../generated/Canary/nest3price';
 import { TokenPrice } from '../generated/schema';
 
 export function handleNowTokenPrice(event: NowTokenPrice): void {
